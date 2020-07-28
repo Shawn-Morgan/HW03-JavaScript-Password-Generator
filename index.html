@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+
+    <!--styles-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+            <div class="card-body">
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated Password"></textarea>
+            </div>
+            <div class="card-footer">
+                <!--number of characters in password input-->
+                <label for="characterAmountNum">Number of characters</label>
+                <input type="number" min="8" max="128" value="8" id="characterAmountNum">
+                
+                <!--include uppercase letters in password checkbox-->
+                <label for="includeUppercase">Include upper case</label>
+                <input type="checkbox" id="includeUppercase">
+                
+                <!--include numbers in password checkbox-->
+                <label for="numbers">Include numbers</label>
+                <input type="checkbox" id="numbers">
+                
+                <!--include symbols in password checkbox-->    
+                <label for="symbols">Include symbols</label>
+                <input type="checkbox" id="symbols">
+                
+                <!--generate password button-->
+                <button id="generate" class="btn">Generate Password</button>
+                
+                <!--copy to clipboard button-->
+                <!--<button id="copy" class="btn">Copy to Clipboard</button>-->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
