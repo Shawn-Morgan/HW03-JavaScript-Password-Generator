@@ -1,15 +1,17 @@
 // ***Assignment Code***
     //result variable of where random password will be generated
 
-window.stop();
-
 function writePassword() {
+
+    event.preventDefault();
+
     var characterAmountNum = ""
     var numbers = "0123456789"
     var includeUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var includeLowercase = "abcdefghijklmnopqrstuvwxyz"
     var special = "!@#$%^&*()_+~`|}{[]:;?><,./-="
     
+
     //whether to include upper case letters
     var includeUppercaseEl = document.getElementById("includeUppercase")
     //whether to include lower case letters
@@ -50,10 +52,12 @@ function writePassword() {
                 
         } else{document.getElementById("characterAmountNum").innerHTML="8"
         }
-    } 
-    }
+    }   
+}
     
 
+
+//code archive...    
 /*
 
 var passwordResultEl = document.getElementById("password")
